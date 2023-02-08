@@ -1,16 +1,14 @@
 # **Class inheritance**
 
-## **I. `extends`**
+## **I. `extends` keyword**
 
-The syntax is:
+The `extends` keyword is used to create a subclass that inherits properties and methods from its parent class. The syntax is:
 
 ```js
-class ChildClass extends ParentClass {
-	/*...*/
-}
+class Child extends Parent {}
 ```
 
-For instance, we would want to add new functionality that would be only accessible in a certain subclass:
+The created subclass can have its own set of properties and methods which the parent class cannot access:
 
 ```js
 class User {

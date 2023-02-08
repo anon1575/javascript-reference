@@ -2,7 +2,7 @@
 
 A `class` is a constructor function that creates an object with initialized properties defined in `constructor` and class fields.
 
-The methods that are defined within the class are stored in the class\` `[[Prototype]]`, while the defined properties are initialized in the object itself. The object created by the class inherits from the same prototype as the class.
+The methods that are defined within the class are stored in the class' `[[Prototype]]`, while the defined properties are initialized in the object itself.
 
 The main difference between classes and constructor functions are:
 
@@ -11,7 +11,7 @@ The main difference between classes and constructor functions are:
 
 ## **I. Syntax**
 
-The basic syntax is:
+The syntax of creating a class with the properties to be initialized and methods to inherit are:
 
 ```js
 class User {

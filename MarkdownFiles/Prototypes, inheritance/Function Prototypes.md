@@ -4,7 +4,9 @@ As we know, the constructor function creates a new object by returning the value
 
 ## **I. Constructor functions - `F.prototype`**
 
-The `prototype` is a special property of a constructor function that serves as the initial prototype to all objects created using the `new` keyword.
+The constructor's `prototype` property is an object that contains the defined methods, the `constructor` method, and its own `[[Prototype]]`.
+
+It serves as the initial `[[Prototype]]` to all instances created using the `new` keyword.
 
 We can modify the constructor function's built-in `[[Prototype]]` by setting its `prototype` property to another object:
 
@@ -72,16 +74,18 @@ function Bird(specie) {
 	this.specie = specie;
 	this.hasWings = true;
 }
-alert(Bird.prototype.constructor == Bird); // true
+alert(Bird.prototype.constructor === Bird); // true
 ```
 
 The default `prototype` will be shared across all objects created by the same constructor function:
 
 ```js
+// same constructor as above
 let penguin = new Bird("penguin");
 let flamingo = new Bird("flamingo");
 
-alert(penguin instanceof Bird === flamingo instanceof Bird); // true
+alert(penguin instanceof Bird); // true
+alert(flamingo instanceof Bird); // true
 ```
 
 ### **Retaining `constructor`**
